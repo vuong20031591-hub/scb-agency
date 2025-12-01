@@ -1,26 +1,86 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Primary Colors */
+  --primary: #19B5AB;
+  --primary-dark: #37AEA4;
+  --primary-light: #4C8075;
+  --secondary: #337B6C;
+  
+  /* Dark Colors */
+  --dark: #010C0B;
+  --dark-alt: #0E1111;
+  --dark-gradient-end: #002629;
+  
+  /* Text Colors */
+  --text-primary: #262626;
+  --text-secondary: #ABABAB;
+  --text-white: #FFFFFF;
+  
+  /* Background Colors */
+  --bg-light: #FAFAFA;
+  --bg-white: #FFFFFF;
+  
+  /* Accent Colors */
+  --accent-red: #E56F66;
+  --accent-coral: #FA7A7A;
+
+  /* Font Sizes */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 30px;
+  --text-4xl: 36px;
+  --text-5xl: 48px;
+
+  /* Font Weights */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-light: var(--primary-light);
+  --color-secondary: var(--secondary);
+  --color-dark: var(--dark);
+  --color-dark-alt: var(--dark-alt);
+  --color-dark-gradient-end: var(--dark-gradient-end);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-white: var(--text-white);
+  --color-bg-light: var(--bg-light);
+  --color-bg-white: var(--bg-white);
+  --color-accent-red: var(--accent-red);
+  --color-accent-coral: var(--accent-coral);
+  --font-sans: 'Roboto', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  overflow-x: hidden;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-white);
+  color: var(--text-primary);
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  min-width: 100%;
+}
+
+/* Hero gradient background */
+.hero-gradient {
+  background: linear-gradient(135deg, rgb(1, 12, 11) 0%, rgb(0, 38, 41) 100%);
+  min-width: 100vw;
+  width: 100%;
+}
+
+/* CTA gradient background - 90deg horizontal like original */
+.cta-gradient {
+  background: linear-gradient(90deg, rgb(1, 12, 11) 0%, rgb(0, 38, 41) 100%);
 }
